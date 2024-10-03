@@ -9,7 +9,8 @@ export const routes: Routes = [
   { path: '', component: MainContentComponent },  // Use MainContentComponent for the root/home page
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }, // Redirect to home if route not found
 ];
 
 @NgModule({
