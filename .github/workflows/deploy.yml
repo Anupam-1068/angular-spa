@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm install --prefer-offline
       - name: Build Angular app
-        run: npm run build -- --configuration production
+        run: ng build --prod --base-href ./dist/angular-spa
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
